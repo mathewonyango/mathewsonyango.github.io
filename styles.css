@@ -1,81 +1,33 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-.hero {
-  background: url('images/profile2.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  color: white;
-  padding: 50px;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.5em;
-}
-
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-}
-
-.tech-stack {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 50px;
-}
-
-.tech-card {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.tech-card:hover {
-  transform: translateY(-10px);
-}
-
-.project-section {
-  padding: 50px;
-  background-color: #fafafa;
-}
-
-.project {
-  display: flex;
-  margin-bottom: 30px;
-}
-
-.project img {
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
-  margin-right: 20px;
-}
-
-footer {
-  background-color: #222;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-footer a {
-  color: white;
-  margin: 0 10px;
-}
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007acc;
+    color: white;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  h1, h2 {
+    margin-top: 0;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
