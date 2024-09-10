@@ -33,9 +33,9 @@
     }
     
     header {
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      background: linear-gradient(135deg, #3a7bd5, #00d2ff);
       color: white;
-      padding: 60px 0;
+      padding: 80px 0;
       position: relative;
       overflow: hidden;
     }
@@ -51,8 +51,9 @@
     }
     
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin-bottom: 0.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
     
     header p {
@@ -61,11 +62,11 @@
     }
     
     .profile-image {
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       border: 5px solid white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     
     .pattern {
@@ -79,37 +80,49 @@
     }
     
     section {
-      padding: 60px 0;
+      padding: 80px 0;
     }
     
     h2 {
       font-size: 2.5em;
       color: var(--primary-color);
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       text-align: center;
+      position: relative;
+    }
+    
+    h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+      margin: 10px auto;
     }
     
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 30px;
     }
     
     .skill-box {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .skill-box:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     }
     
     .skill-box h3 {
       color: var(--primary-color);
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 1.5em;
     }
     
     .skill-box ul {
@@ -117,20 +130,36 @@
     }
     
     .skill-box li {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+    }
+    
+    .skill-box li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
     }
     
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      gap: 40px;
     }
     
     .project-card {
       background: white;
-      border-radius: 8px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     }
     
     .project-card img {
@@ -140,38 +169,130 @@
     }
     
     .project-info {
-      padding: 20px;
+      padding: 30px;
     }
     
     .project-info h3 {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: var(--primary-color);
+      font-size: 1.5em;
     }
     
     .btn {
       display: inline-block;
-      background-color: var(--primary-color);
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 12px 25px;
+      border-radius: 25px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 15px;
     }
     
     .btn:hover {
-      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
     
     footer {
-      background-color: #333;
+      background: linear-gradient(135deg, #141e30, #243b55);
       color: white;
       text-align: center;
-      padding: 20px 0;
+      padding: 40px 0;
     }
     
     footer a {
       color: var(--secondary-color);
       text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: white;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--primary-color);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid var(--primary-color);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .left {
+      left: 0;
+    }
+    
+    .right {
+      left: 50%;
+    }
+    
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid var(--primary-color);
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent var(--primary-color);
+    }
+    
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid var(--primary-color);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--primary-color) transparent transparent;
+    }
+    
+    .right::after {
+      left: -16px;
+    }
+    
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     
     @media (max-width: 768px) {
@@ -182,6 +303,31 @@
       
       .profile-image {
         margin-top: 20px;
+      }
+      
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item::before {
+        left: 60px;
+        border: medium solid var(--primary-color);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--primary-color) transparent transparent;
+      }
+      
+      .left::after, .right::after {
+        left: 15px;
+      }
+      
+      .right {
+        left: 0%;
       }
     }
   </style>
@@ -204,7 +350,7 @@
         <p>Full Stack Developer</p>
         <p>Frontend Enthusiast | Backend Skilled</p>
       </div>
-      <img src="images\profile.jpeg" alt="Mathews Onyango" class="profile-image">
+      <img src="images/profile.jpeg" alt="Mathews Onyango" class="profile-image">
     </div>
   </header>
 
@@ -222,11 +368,12 @@
         <div class="skill-box">
           <h3>Frontend</h3>
           <ul>
-            <li>JavaScript</li>
-            <li>ReactJS</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>ReactJS & Redux</li>
+            <li>Vue.js</li>
+            <li>HTML5 & CSS3</li>
             <li>Tailwind CSS</li>
+            <li>Responsive Design</li>
           </ul>
         </div>
         <div class="skill-box">
@@ -234,7 +381,10 @@
           <ul>
             <li>PHP (Laravel)</li>
             <li>Java (Spring Boot)</li>
+            <li>Node.js & Express</li>
+            <li>Python (Django)</li>
             <li>RESTful APIs</li>
+            <li>GraphQL</li>
           </ul>
         </div>
         <div class="skill-box">
@@ -243,15 +393,20 @@
             <li>MS SQL</li>
             <li>MySQL</li>
             <li>MongoDB</li>
+            <li>PostgreSQL</li>
+            <li>Redis</li>
+            <li>Database Design</li>
           </ul>
         </div>
         <div class="skill-box">
           <h3>DevOps & Cloud</h3>
           <ul>
-            <li>AWS</li>
+            <li>AWS (EC2, S3, Lambda)</li>
             <li>Digital Ocean</li>
-            <li>Docker</li>
-            <li>Git</li>
+            <li>Docker & Kubernetes</li>
+            <li>CI/CD (Jenkins, GitLab)</li>
+            <li>Git & GitHub</li>
+            <li>Linux Administration</li>
           </ul>
         </div>
       </div>
@@ -263,7 +418,7 @@
       <h2>Featured Projects</h2>
       <div class="project-grid">
         <div class="project-card">
-          <img src="images\sacco.png" alt="Core Banking System">
+          <img src="images/sacco.png" alt="Core Banking System">
           <div class="project-info">
             <h3>Core Banking System for SACCOs</h3>
             <p>A comprehensive solution for managing financial transactions and member accounts.</p>
@@ -271,7 +426,7 @@
           </div>
         </div>
         <div class="project-card">
-          <img src="images\hms.png" alt="Hotel Management System">
+          <img src="images/hms.png" alt="Hotel Management System">
           <div class="project-info">
             <h3>Hotel Management System</h3>
             <p>Streamlined platform for booking, guest management, and hotel operations.</p>
@@ -279,14 +434,82 @@
           </div>
         </div>
         <div class="project-card">
-          <img src="images\lending.png" alt="Loan Management System">
+          <img src="images/lending.png" alt="Loan Management System">
           <div class="project-info">
             <h3>Loan Management System</h3>
             <p>Efficient system for processing loan applications and managing repayments.</p>
             <a href="https://github.com/mathewsonyango/project-loan-management" class="btn">View on GitHub</a>
           </div>
         </div>
+        <div class="project-card">
+          <img src="images/network-portal.png" alt="Network Portal">
+          <div class="project-info">
+            <h3>Network Portal</h3>
+            <p>Comprehensive system for managing WiFi installations, client payments, technician payroll, and generating reports.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/godeliveries.png" alt="GoDeliveries">
+          <div class="project-info">
+            <h3>GoDeliveries</h3>
+            <p>A Glovo-like delivery application covering Nairobi, set to launch in October. Features efficient routing and real-time tracking.</p>
+            <a href="#" class="btn">Coming Soon</a>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>Professional Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>Senior Full Stack Developer</h3>
+            <h4>Tech Innovators Ltd</h4>
+            <p>2021 - Present</p>
+            <ul>
+              <li>Lead development of large-scale web applications</li>
+              <li>Mentor junior developers and conduct code reviews</li>
+              <li>Implement cloud-based solutions using AWS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>Full Stack Developer</h3>
+            <h4>Digital Solutions Inc.</h4>
+            <p>2018 - 2021</p>
+            <ul>
+              <li>Developed and maintained multiple client projects</li>
+              <li>Implemented RESTful APIs and integrated third-party services</li>
+              <li>Optimized database queries and improved application performance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>Junior Web Developer</h3>
+            <h4>WebCraft Studios</h4>
+            <p>2016 - 2018</p>
+            <ul>
+              <li>Assisted in the development of responsive websites</li>
+              <li>Collaborated with designers to implement pixel-perfect UIs</li>
+              <li>Learned and applied best practices in web development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+      <a href="mailto:mathewsagumbah@gmail.com" class="btn">Email Me</a>
     </div>
   </section>
 
@@ -294,6 +517,7 @@
     <div class="container">
       <p>Contact: <a href="mailto:mathewsagumbah@gmail.com">mathewsagumbah@gmail.com</a></p>
       <p>Phone: +254702622569</p>
+      <p>&copy; 2023 Mathews Onyango. All rights reserved.</p>
     </div>
   </footer>
 </body>
