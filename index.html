@@ -48,29 +48,139 @@
         <!--================Header Menu Area =================-->
         
         <!--================Home Banner Area =================-->
-        <section class="home_banner_area">
-            <div class="banner_inner">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="home_left_img">
-								<img src="img/banner/profile image.jpeg" alt="">
-							</div>
-						</div>
-
-						<div class="col-lg-6">
-							<div class="banner_content">
-								<h5>About Me</h5>
-								<h2>Mathews Ong'any</h2>
-								<p>Experienced Full Stack Developer and CRM Engineer at Safaricom PLC, specializing in scalable software solutions across finance, hospitality, and public sectors. Passionate about system architecture, cloud platforms, and secure, efficient development.</p>
-								<a class="banner_btn" href="#">Explore My Work</a>
-							</div>
-						</div>
-						
+		<style>
+			.home_banner_area {
+			  padding: 100px 0;
+			  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+			  overflow: hidden;
+			}
+		
+			.banner_inner {
+			  position: relative;
+			}
+		
+			.home_left_img {
+			  position: relative;
+			  animation: float 6s ease-in-out infinite;
+			}
+		
+			.home_left_img img {
+			  max-width: 100%;
+			  border-radius: 20px;
+			  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+			  transition: transform 0.3s ease;
+			}
+		
+			.home_left_img img:hover {
+			  transform: scale(1.02);
+			}
+		
+			.banner_content {
+			  padding: 20px;
+			  animation: slideIn 1s ease-out;
+			}
+		
+			.banner_content h5 {
+			  color: #6c757d;
+			  font-size: 18px;
+			  font-weight: 500;
+			  margin-bottom: 15px;
+			  letter-spacing: 2px;
+			  text-transform: uppercase;
+			}
+		
+			.banner_content h2 {
+			  font-size: 48px;
+			  font-weight: 700;
+			  margin-bottom: 20px;
+			  background: linear-gradient(45deg, #2196F3, #673AB7);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			}
+		
+			.banner_content p {
+			  font-size: 16px;
+			  line-height: 1.8;
+			  color: #495057;
+			  margin-bottom: 30px;
+			}
+		
+			.banner_btn {
+			  display: inline-block;
+			  padding: 15px 30px;
+			  background: linear-gradient(45deg, #2196F3, #673AB7);
+			  color: white;
+			  text-decoration: none;
+			  border-radius: 50px;
+			  font-weight: 500;
+			  transition: all 0.3s ease;
+			  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+			}
+		
+			.banner_btn:hover {
+			  transform: translateY(-3px);
+			  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+			}
+		
+			@keyframes float {
+			  0% { transform: translateY(0px); }
+			  50% { transform: translateY(-20px); }
+			  100% { transform: translateY(0px); }
+			}
+		
+			@keyframes slideIn {
+			  from {
+				opacity: 0;
+				transform: translateX(50px);
+			  }
+			  to {
+				opacity: 1;
+				transform: translateX(0);
+			  }
+			}
+		
+			@media (max-width: 991px) {
+			  .home_banner_area {
+				padding: 50px 0;
+			  }
+			  
+			  .banner_content h2 {
+				font-size: 36px;
+			  }
+			  
+			  .banner_content {
+				text-align: center;
+				margin-top: 30px;
+			  }
+			  
+			  .home_left_img {
+				margin-bottom: 30px;
+			  }
+			}
+		  </style>
+		</head>
+		<body>
+		  <section class="home_banner_area">
+			<div class="banner_inner">
+			  <div class="container">
+				<div class="row">
+				  <div class="col-lg-6">
+					<div class="home_left_img">
+					  <img src="img/banner/profile image.jpeg" alt="Mathews Ong'any">
 					</div>
+				  </div>
+				  <div class="col-lg-6">
+					<div class="banner_content">
+					  <h5>About Me</h5>
+					  <h2>Mathews Ong'any</h2>
+					  <p>Experienced Full Stack Developer and CRM Engineer at Safaricom PLC, specializing in scalable software solutions across finance, hospitality, and public sectors. Passionate about system architecture, cloud platforms, and secure, efficient development.</p>
+					  <a class="banner_btn" href="#">Explore My Work</a>
+					</div>
+				  </div>
 				</div>
-            </div>
-        </section>
+			  </div>
+			</div>
+		  </section>
         <!--================End Home Banner Area =================-->
         
         <!--================Welcome Area =================-->
