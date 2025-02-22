@@ -701,102 +701,317 @@
 		<!--================End Latest Blog Area =================-->
 
 		<!--================Footer Area =================-->
-		<footer class="footer_area p_120">
-			<div class="container">
-				<div class="row footer_inner">
-					<!-- About Section -->
-					<div class="col-lg-4 col-sm-6">
-						<aside class="f_widget ab_widget">
-							<div class="f_title">
-								<h3>About Me</h3>
-							</div>
-							<p>Passionate about technology and innovation, I aim to create impactful digital solutions. With a strong background in development, I bring creativity and problem-solving skills to every project.</p>
-							<p>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Built with ❤️ by Mathews Onyango</p>
-						</aside>
-					</div>
-		
-					<!-- Quick Links -->
-					<div class="col-lg-4 col-sm-6">
-						<aside class="f_widget link_widget">
-							<div class="f_title">
-								<h3>Quick Links</h3>
-							</div>
-							<ul class="list">
-								<li><a href="#home">Home</a></li>
-								<li><a href="#portfolio">Portfolio</a></li>
-								<li><a href="#services">Services</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</aside>
-					</div>
-		
-					<!-- Social & Contact -->
-					<div class="col-lg-4 col-sm-6">
-						<aside class="f_widget social_widget">
-							<div class="f_title">
-								<h3>Connect with Me</h3>
-							</div>
-							<p>Let's connect on social media:</p>
-							<ul class="social-list">
-								<li><a href="https://www.linkedin.com/in/mathews-onyango-616454146/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								<li><a href="https://twitter.com/Mathews_Africa" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="https://github.com/yourgithubprofile" target="_blank"><i class="fab fa-github"></i></a></li>
-								<li><a href="mailto:mathewsonyango@example.com"><i class="fa fa-envelope"></i></a></li>
-							</ul>
-						</aside>
-					</div>
+		<footer class="modern-dev-footer">
+			<div class="gradient-overlay"></div>
+			
+			<div class="footer-content">
+			  <div class="identity-section">
+				<div class="dev-brand">
+				  <div class="name-logo">MO</div>
+				  <div class="identity">
+					<h2>Mathews Onyango</h2>
+					<span class="role">Software Engineer</span>
+				  </div>
 				</div>
+				<p class="tagline">"Building tomorrow's solutions with today's code"</p>
+			  </div>
+		  
+			  <div class="contact-grid">
+				<a href="mailto:mathewsagumbah@gmail.com" class="contact-card email-card">
+				  <div class="card-content">
+					<div class="icon-wrapper">
+					  <i class="fas fa-envelope"></i>
+					</div>
+					<div class="contact-info">
+					  <span class="label">Email</span>
+					  <span class="value">mathewsagumbah@gmail.com</span>
+					</div>
+				  </div>
+				  <div class="hover-effect"></div>
+				</a>
+		  
+				<a href="https://github.com/mathewonyango" target="_blank" class="contact-card github-card">
+				  <div class="card-content">
+					<div class="icon-wrapper">
+					  <i class="fab fa-github"></i>
+					</div>
+					<div class="contact-info">
+					  <span class="label">GitHub</span>
+					  <span class="value">@mathewonyango</span>
+					</div>
+				  </div>
+				  <div class="hover-effect"></div>
+				</a>
+		  
+				<a href="https://linkedin.com/in/mathews-onyango-616454146" target="_blank" class="contact-card linkedin-card">
+				  <div class="card-content">
+					<div class="icon-wrapper">
+					  <i class="fab fa-linkedin"></i>
+					</div>
+					<div class="contact-info">
+					  <span class="label">LinkedIn</span>
+					  <span class="value">Mathews Onyango</span>
+					</div>
+				  </div>
+				  <div class="hover-effect"></div>
+				</a>
+			  </div>
+		  
+			  <div class="newsletter-container">
+				<div class="newsletter-content">
+				  <h3>Stay Connected</h3>
+				  <p>Subscribe to receive updates about my latest projects and tech insights</p>
+				  <form class="newsletter-form">
+					<div class="input-group">
+					  <input type="email" placeholder="Enter your email" required>
+					  <button type="submit">
+						<i class="fas fa-arrow-right"></i>
+					  </button>
+					</div>
+				  </form>
+				</div>
+			  </div>
+		  
+			  <div class="footer-bottom">
+				<p>&copy; <span id="current-year"></span> Mathews Onyango • All rights reserved</p>
+			  </div>
 			</div>
-		</footer>
-		
-		<style>
-			.footer_area {
-				background: #181818;
-				color: #ffffff;
-				padding: 60px 0;
-			}
-		
-			.footer_inner .f_title h3 {
-				color: #f8f9fa;
-				font-size: 20px;
-				margin-bottom: 15px;
-			}
-		
-			.f_widget ul.list {
-				list-style: none;
-				padding: 0;
-			}
-		
-			.f_widget ul.list li a {
-				color: #bbbbbb;
-				text-decoration: none;
-				transition: 0.3s;
-			}
-		
-			.f_widget ul.list li a:hover {
-				color: #ff5e57;
-			}
-		
-			.social-list {
+		  
+			<style>
+			  .modern-dev-footer {
+				position: relative;
+				background: #0f172a;
+				color: #e2e8f0;
+				padding: 4rem 2rem 1.5rem;
+				overflow: hidden;
+			  }
+		  
+			  .gradient-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: 
+				  radial-gradient(circle at 20% 150%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+				  radial-gradient(circle at 80% -50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+				pointer-events: none;
+			  }
+		  
+			  .footer-content {
+				max-width: 1200px;
+				margin: 0 auto;
+				position: relative;
+				z-index: 1;
+			  }
+		  
+			  .identity-section {
+				text-align: center;
+				margin-bottom: 4rem;
+			  }
+		  
+			  .dev-brand {
+				display: inline-flex;
+				align-items: center;
+				gap: 1.5rem;
+				margin-bottom: 1rem;
+			  }
+		  
+			  .name-logo {
+				width: 64px;
+				height: 64px;
+				background: linear-gradient(135deg, #3b82f6, #6366f1);
+				border-radius: 16px;
 				display: flex;
-				gap: 10px;
-			}
-		
-			.social-list li {
-				list-style: none;
-			}
-		
-			.social-list li a {
-				color: #ffffff;
-				font-size: 20px;
-				transition: 0.3s;
-			}
-		
-			.social-list li a:hover {
-				color: #ff5e57;
-			}
-		</style>
-		
+				align-items: center;
+				justify-content: center;
+				font-size: 1.8rem;
+				font-weight: bold;
+				color: white;
+				transform: rotate(-12deg);
+				box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2);
+			  }
+		  
+			  .identity h2 {
+				font-size: 2rem;
+				margin: 0;
+				color: #fff;
+				font-weight: 700;
+			  }
+		  
+			  .role {
+				color: #94a3b8;
+				font-size: 1.2rem;
+			  }
+		  
+			  .tagline {
+				color: #64748b;
+				font-size: 1.1rem;
+				font-style: italic;
+			  }
+		  
+			  .contact-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5rem;
+				margin-bottom: 4rem;
+			  }
+		  
+			  .contact-card {
+				position: relative;
+				padding: 1.5rem;
+				background: rgba(255, 255, 255, 0.03);
+				border-radius: 12px;
+				overflow: hidden;
+				text-decoration: none;
+				color: inherit;
+				transition: all 0.3s ease;
+			  }
+		  
+			  .card-content {
+				position: relative;
+				z-index: 1;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			  }
+		  
+			  .hover-effect {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			  }
+		  
+			  .contact-card:hover {
+				transform: translateY(-4px);
+			  }
+		  
+			  .contact-card:hover .hover-effect {
+				opacity: 1;
+			  }
+		  
+			  .icon-wrapper {
+				width: 48px;
+				height: 48px;
+				background: rgba(59, 130, 246, 0.1);
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				color: #3b82f6;
+			  }
+		  
+			  .contact-info {
+				display: flex;
+				flex-direction: column;
+			  }
+		  
+			  .label {
+				font-size: 0.9rem;
+				color: #94a3b8;
+			  }
+		  
+			  .value {
+				color: #fff;
+				font-size: 1rem;
+			  }
+		  
+			  .newsletter-container {
+				background: rgba(59, 130, 246, 0.05);
+				border-radius: 16px;
+				padding: 2.5rem;
+				margin-bottom: 3rem;
+				text-align: center;
+			  }
+		  
+			  .newsletter-content h3 {
+				color: #fff;
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+			  }
+		  
+			  .newsletter-content p {
+				color: #94a3b8;
+				margin-bottom: 1.5rem;
+			  }
+		  
+			  .input-group {
+				display: flex;
+				gap: 0.5rem;
+				max-width: 400px;
+				margin: 0 auto;
+			  }
+		  
+			  .input-group input {
+				flex: 1;
+				padding: 0.75rem 1rem;
+				border: 1px solid rgba(59, 130, 246, 0.2);
+				border-radius: 8px;
+				background: rgba(15, 23, 42, 0.5);
+				color: #fff;
+				outline: none;
+			  }
+		  
+			  .input-group button {
+				padding: 0.75rem 1.5rem;
+				background: linear-gradient(135deg, #3b82f6, #6366f1);
+				color: #fff;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			  }
+		  
+			  .input-group button:hover {
+				transform: translateX(2px);
+			  }
+		  
+			  .footer-bottom {
+				text-align: center;
+				padding-top: 2rem;
+				border-top: 1px solid rgba(226, 232, 240, 0.1);
+				color: #64748b;
+			  }
+		  
+			  @media (max-width: 768px) {
+				.dev-brand {
+				  flex-direction: column;
+				  text-align: center;
+				}
+		  
+				.contact-grid {
+				  grid-template-columns: 1fr;
+				}
+		  
+				.input-group {
+				  flex-direction: column;
+				}
+		  
+				.input-group button {
+				  width: 100%;
+				}
+			  }
+			</style>
+		  
+			<script>
+			  // Update current year
+			  document.getElementById('current-year').textContent = new Date().getFullYear();
+		  
+			  // Handle newsletter form
+			  document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+				e.preventDefault();
+				const email = this.querySelector('input').value;
+				alert('Thanks for subscribing! You\'ll receive updates about my latest work.');
+				this.reset();
+			  });
+			</script>
+		  </footer>
 
 		<!--================End Footer Area =================-->
 
