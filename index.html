@@ -287,6 +287,137 @@
 				margin-bottom: 30px;
 			  }
 			}
+
+			/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+#interactive_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Q&A Box */
+.qa_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.qa_box input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.qa_box button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.qa_box button:hover {
+    background: #ff1e50;
+    transform: scale(1.05);
+}
+
+/* Animation Button */
+button {
+    background: linear-gradient(135deg, #1db954, #1a73e8);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 15px 5px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Animated Text */
+#animatedText {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffde59;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Poll Section */
+h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Vote Results */
+#voteResults {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1db954;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 		  </style>
 		</head>
 		<body>
@@ -338,7 +469,43 @@
 				<p id="voteResults"></p>
 			</div>
 		</section>
-		
+		<script>
+	// Simple Q&A Logic
+function askQuestion() {
+    const question = document.getElementById("user_question").value.toLowerCase();
+    const response = document.getElementById("answer_response");
+
+    let answers = {
+        "who are you": "I'm Mathews, a Full Stack Developer & CRM Engineer!",
+        "what do you do": "I build scalable software and optimize CRM systems.",
+        "how can i connect with you": "Find me on LinkedIn or GitHub!"
+    };
+
+    response.innerText = answers[question] || "I don’t have an answer for that yet!";
+}
+
+// Animation Effect
+function animateText() {
+    let text = document.getElementById("animatedText");
+    text.style.transition = "all 0.5s ease-in-out";
+    text.style.transform = "scale(1.2)";
+    text.style.color = "#ff4500";
+
+    setTimeout(() => {
+        text.style.transform = "scale(1)";
+        text.style.color = "#000";
+    }, 1000);
+}
+
+// Simple Poll Voting
+let votes = { "AI Project": 0, "Web App": 0, "Automation Tool": 0 };
+
+function vote(option) {
+    votes[option]++;
+    document.getElementById("voteResults").innerText = `Votes: AI(${votes["AI Project"]}), Web(${votes["Web App"]}), Automation(${votes["Automation Tool"]})`;
+}
+
+		</script>
 
 		  <!-- // end of interaction  -->
         <!--================End Home Banner Area =================-->
