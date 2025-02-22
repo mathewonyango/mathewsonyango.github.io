@@ -8,6 +8,8 @@
         <title>Mathews Ong'any </title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
         <link rel="stylesheet" href="vendors/linericon/style.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
@@ -49,6 +51,134 @@
         
         <!--================Home Banner Area =================-->
 		<style>
+    .latest_blog_area {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+
+    .main_title {
+      text-align: center;
+      margin-bottom: 60px;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .main_title h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #2196F3, #673AB7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .main_title p {
+      font-size: 18px;
+      color: #6c757d;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .feature_inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .feature_item {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .feature_item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .feature_item i {
+      font-size: 48px;
+      margin-bottom: 25px;
+      padding: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(103, 58, 183, 0.1));
+      color: #2196F3;
+      transition: all 0.3s ease;
+    }
+
+    .feature_item:hover i {
+      transform: scale(1.1) rotate(5deg);
+      background: linear-gradient(135deg, #2196F3, #673AB7);
+      color: white;
+    }
+
+    .feature_item h4 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .feature_item:hover h4 {
+      background: linear-gradient(45deg, #2196F3, #673AB7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .feature_item p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #6c757d;
+      margin: 0;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Custom icons using SVG */
+    .icon-container {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 991px) {
+      .feature_inner {
+        gap: 20px;
+      }
+      
+      .feature_item {
+        padding: 30px 20px;
+      }
+      
+      .main_title h2 {
+        font-size: 30px;
+      }
+      
+      .main_title p {
+        font-size: 16px;
+      }
+    }
 			.home_banner_area {
 			  padding: 100px 0;
 			  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -263,58 +393,60 @@
         
         <!--================Feature Area =================-->
 		<!-- <section class="feature_area p_120"> -->
-		<section class="latest_blog_area p_120" id="work_section">
-			<div class="container">
-				<div class="main_title">
+			<section class="latest_blog_area p_120" id="work_section">
+				<div class="container">
+				  <div class="main_title">
 					<h2>Services I Offer</h2>
 					<p>Explore the range of services I provide to help you achieve your technology and business goals. My offerings are designed to be comprehensive and tailored to meet your specific needs.</p>
+				  </div>
+				  <div class="feature_inner row">
+					<div class="col-lg-4 col-md-6" style="animation-delay: 0.1s;">
+					  <div class="feature_item">
+						<i class="fas fa-code"></i>
+						<h4>Web Development</h4>
+						<p>Custom web development solutions including responsive design, e-commerce platforms, and content management systems. Tailored to enhance your online presence and user engagement.</p>
+					  </div>
+					</div>
+					<div class="col-lg-4 col-md-6" style="animation-delay: 0.2s;">
+					  <div class="feature_item">
+						<i class="fas fa-mobile-alt"></i>
+						<h4>Application Development</h4>
+						<p>End-to-end application development services for web and mobile platforms. Focused on creating scalable, efficient, and user-friendly applications to meet your business needs.</p>
+					  </div>
+					</div>
+					<div class="col-lg-4 col-md-6" style="animation-delay: 0.3s;">
+					  <div class="feature_item">
+						<i class="fas fa-lightbulb"></i>
+						<h4>IT Consulting</h4>
+						<p>Expert IT consulting to guide you through technology decisions, system integrations, and strategy development. Aimed at optimizing your IT infrastructure and improving operational efficiency.</p>
+					  </div>
+					</div>
+					<div class="col-lg-4 col-md-6" style="animation-delay: 0.4s;">
+					  <div class="feature_item">
+						<i class="fas fa-cloud"></i>
+						<h4>Cloud Solutions</h4>
+						<p>Comprehensive cloud services including cloud migration, deployment, and management. Designed to enhance flexibility, scalability, and cost-effectiveness in your IT operations.</p>
+					  </div>
+					</div>
+					<div class="col-lg-4 col-md-6" style="animation-delay: 0.5s;">
+					  <div class="feature_item">
+						<i class="fas fa-shield-alt"></i>
+						<h4>Cybersecurity</h4>
+						<p>Robust cybersecurity solutions to protect your data and systems from threats. Includes risk assessment, security audits, and implementation of best practices to ensure your security posture.</p>
+					  </div>
+					</div>
+					<div class="col-lg-4 col-md-6" style="animation-delay: 0.6s;">
+					  <div class="feature_item">
+						<i class="fas fa-headset"></i>
+						<h4>Technical Support</h4>
+						<p>Reliable technical support services to assist with troubleshooting, maintenance, and user support. Ensuring your systems operate smoothly and issues are resolved promptly.</p>
+					  </div>
+					</div>
+				  </div>
 				</div>
-				<div class="feature_inner row">
-					<div class="col-lg-4 col-md-6">
-						<div class="feature_item">
-							<i class="flaticon-web-development"></i>
-							<h4>Web Development</h4>
-							<p>Custom web development solutions including responsive design, e-commerce platforms, and content management systems. Tailored to enhance your online presence and user engagement.</p>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="feature_item">
-							<i class="flaticon-application"></i>
-							<h4>Application Development</h4>
-							<p>End-to-end application development services for web and mobile platforms. Focused on creating scalable, efficient, and user-friendly applications to meet your business needs.</p>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="feature_item">
-							<i class="flaticon-consulting"></i>
-							<h4>IT Consulting</h4>
-							<p>Expert IT consulting to guide you through technology decisions, system integrations, and strategy development. Aimed at optimizing your IT infrastructure and improving operational efficiency.</p>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="feature_item">
-							<i class="flaticon-cloud"></i>
-							<h4>Cloud Solutions</h4>
-							<p>Comprehensive cloud services including cloud migration, deployment, and management. Designed to enhance flexibility, scalability, and cost-effectiveness in your IT operations.</p>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="feature_item">
-							<i class="flaticon-security"></i>
-							<h4>Cybersecurity</h4>
-							<p>Robust cybersecurity solutions to protect your data and systems from threats. Includes risk assessment, security audits, and implementation of best practices to ensure your security posture.</p>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="feature_item">
-							<i class="flaticon-support"></i>
-							<h4>Technical Support</h4>
-							<p>Reliable technical support services to assist with troubleshooting, maintenance, and user support. Ensuring your systems operate smoothly and issues are resolved promptly.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+			  </section>
+			
+			  <!-- Add Font Awesome for icons -->
 		
         <!--================End Feature Area =================-->
         
