@@ -312,6 +312,35 @@
 			  </div>
 			</div>
 		  </section>
+
+		  <!-- //this section is for interactions -->
+		  <section id="interactive_section">
+			<div class="container">
+				<h2>Engage With Me!</h2>
+				<p>Ask me questions, play games, or test out cool interactions.</p>
+		
+				<!-- Q&A -->
+				<div class="qa_box">
+					<input type="text" id="user_question" placeholder="Ask me something...">
+					<button onclick="askQuestion()">Ask</button>
+					<p id="answer_response"></p>
+				</div>
+		
+				<!-- Animation Playground -->
+				<button onclick="animateText()">Click for Animation</button>
+				<h3 id="animatedText">Hello, I'm Mathews!</h3>
+		
+				<!-- Poll -->
+				<h4>Vote on My Next Project:</h4>
+				<button onclick="vote('AI Project')">AI</button>
+				<button onclick="vote('Web App')">Web</button>
+				<button onclick="vote('Automation Tool')">Automation</button>
+				<p id="voteResults"></p>
+			</div>
+		</section>
+		
+
+		  <!-- // end of interaction  -->
         <!--================End Home Banner Area =================-->
         
         <!--================Welcome Area =================-->
